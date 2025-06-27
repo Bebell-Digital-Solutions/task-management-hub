@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: "Visit all of Bebell Digital Solutions's pens",
                 description: "Discover all of Bebell Digital Solutions's pens and leave a nice comment!",
                 deadline: new Date().toISOString(),
-                color: "#3a86ff",
+                color: "#df1783", // Changed from blue to pink
                 image: null
             },
             {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: "Like and comment this pen",
                 description: "Give a like and comment on this pen to show your appreciation!",
                 deadline: new Date().toISOString(),
-                color: "#3a86ff",
+                color: "#df1783", // Changed from blue to pink
                 image: null
             }
         ];
