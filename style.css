@@ -81,7 +81,7 @@
 [data-theme="dark"] .form-group textarea:focus {
     border-color: var(--primary);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    box-shadow: 0 0 0 2px rgba(223, 23, 131, 0.2);
 }
 
 [data-theme="dark"] .task__date {
@@ -89,7 +89,7 @@
 }
 
 [data-theme="dark"] .column.drag-over {
-    background-color: rgba(96, 165, 250, 0.1);
+    background-color: rgba(223, 23, 131, 0.1);
 }
 
 [data-theme="dark"] .task-list.drag-over {
@@ -283,7 +283,7 @@ body {
 }
 
 .column.drag-over {
-    background-color: rgba(58, 134, 255, 0.1);
+    background-color: rgba(223, 23, 131, 0.1);
 }
 
 .column__header {
