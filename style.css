@@ -130,11 +130,84 @@
     color: var(--text);
 }
 
+
+/* Add these new styles at the top of your CSS */
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.app-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Update these existing styles */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 1rem auto;
+    flex: 1;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.column {
+    min-height: 400px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .board {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .column {
+        min-height: 300px;
+    }
+    
+    .header__title {
+        font-size: 2rem;
+    }
+    
+    .header__stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .header__stat {
+        width: 100%;
+    }
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -143,6 +216,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .header {
@@ -155,10 +229,10 @@ body {
 }
 
 .header__content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .header__title {
@@ -326,6 +400,9 @@ body {
     -webkit-user-select: none;
     user-select: none;
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .task.dragging {
@@ -417,9 +494,10 @@ body {
     background: white;
     padding: 2rem;
     border-radius: var(--radius);
-    width: 90%;
+    width: 95%;
     max-width: 500px;
     position: relative;
+    margin: 1rem;
 }
 
 .modal__close {
