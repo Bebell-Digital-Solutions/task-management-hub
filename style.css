@@ -872,9 +872,14 @@ input[type="color"]:hover {
 
 
   .bebell-footer p {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    text-align: center;        
     font-size: 12px;
     line-height: 1.5;
     margin: 0;
+      padding: 30px;
   }
   
   .bebell-link {
