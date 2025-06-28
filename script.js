@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateThemeIcon(theme) {
-        themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggle.textContent = theme === 'dark' ? '🌝' : '🌚';
     }
     
     // Handle theme change
