@@ -868,3 +868,27 @@ input[type="color"]:hover {
         right: 3rem;
     }
 }
+
+
+
+  .bebell-footer p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .bebell-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .bebell-link:hover {
+    color: #df1783;
+  }
+
+
+
+
+
+
