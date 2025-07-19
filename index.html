@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="theme-toggle" id="themeToggle">🌚</button>
-    <button class="help-toggle" id="helpToggle">❓</button>
+
 
     <!-- Help modal -->
     <div class="modal" id="helpModal">
         <div class="modal__content help-modal__content">
             <button class="modal__close" onclick="closeHelpModal()">&times;</button>
             <div class="help-header">
-                <div class="help-icon">📘</div>
+                <div class="help-icon">📓</div>
                 <h2>User Guide</h2>
             </div>
             <p class="help-intro">Welcome to Task Manager! This guide will help you get the most out of this application.</p>
@@ -76,7 +75,7 @@
                     <div class="help-section-content">
                         <ul>
                             <li><strong>Local Storage</strong> - Your tasks are automatically saved in your browser</li>
-                            <li><strong>Dark Mode</strong> - Toggle between light and dark themes with the 🌙/☀️ button</li>
+                            <li><strong>Dark Mode</strong> - Toggle between light and dark themes with the 🌓 button</li>
                             <li><strong>Task Stats</strong> - View your progress with the counters at the top of the page</li>
                             <li><strong>Task Colors</strong> - Use colors to categorize or prioritize your tasks</li>
                             <li><strong>Images</strong> - Add images to tasks that need visual context</li>
@@ -92,6 +91,11 @@
     </div>
 
     <header class="header">
+
+    <button class="theme-toggle" id="themeToggle">🌚</button>
+    <button class="help-toggle" id="helpToggle">⁉️</button>
+
+        
         <div class="header__content">
             <h1 class="header__title">Task Manager</h1>
             <p class="header__subtitle">Organize your work with ease</p>
@@ -113,6 +117,9 @@
     </header>
 
     <div class="container">
+
+
+        
         <div class="board">
             <div class="column" id="todo">
                 <div class="column__header">
