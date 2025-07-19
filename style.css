@@ -86,12 +86,28 @@ body {
 }
 
 .header__stats {
-    display: flex;
-    justify-content: center;
+ display: flex;
+  flex-wrap: wrap; /* Allow stats to wrap on small screens */
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 0;
     gap: 1.5rem;
     margin-top: 1.5rem;
     animation: fadeIn 0.5s ease-out 0.4s backwards;
 }
+
+.header__stats {
+  display: flex;
+  flex-wrap: wrap; /* Allow stats to wrap on small screens */
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 0;
+}
+
+
 
 .header__stat {
     background: rgba(255, 255, 255, 0.1);
@@ -427,6 +443,102 @@ input[type="color"]:hover {
     color: var(--text-light);
     font-size: 0.9rem;
 }
+
+
+/* ===== HEADER STATS FIX ===== */
+
+@media (max-width: 768px) {
+  .header__stats {
+    flex-direction: row; /* Keep horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .header__stat {
+    flex: 1 1 30%; /* Grow and shrink, min 30% width */
+    min-width: 110px; /* Minimum width before wrapping */
+    max-width: none; /* Remove max-width restriction */
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__stat {
+    flex: 1 1 45%; /* More flexible sizing on very small screens */
+    min-width: 100px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.2rem;
+  }
+  
+  .header__stat-value {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== FLOATING BUTTONS STACKING ===== */
+.floating-buttons {
+  position: fixed;
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 12px; /* Space between buttons */
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-toggle, .help-toggle {
+  position: static; /* Remove individual positioning */
+  margin: 0; /* Reset margins */
+  width: 40px;
+  height: 40px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+/* Remove existing positioning rules */
+.theme-toggle, 
+.help-toggle {
+  top: auto;
+  right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-buttons {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .theme-toggle, .help-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-buttons {
+    gap: 10px;
+  }
+  
+  .theme-toggle, .help-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+
 
 /* ===== FOOTER ===== */
 .footer {
